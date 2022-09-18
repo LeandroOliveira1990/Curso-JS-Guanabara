@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(168, 173, 245) ;
+            color: black;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div> <!-- Atribuindo ID-->
+    <script>
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[1];
+        p1.style.color = 'red';
+        window.document.write('Está escrito assim: ' + p1.innerText  );
+        corpo.style.background = 'orange';
+        window.document.write('</br>Formatado fica ssim: ' + p1.innerHTML);
+        
+        /*var d = window.document.getElementById('msg');//seleciona por ID.
+        d.style.background = 'green';
+        d.innerText = 'Estou aguardando...';
+        */
+
+        
+
+        /* var d = window.document.getElementsByName('msg')[0];
+        d.innerText = 'Olá!'; // precisa alterar o id para name.
+
+        */
+
+        var d = window.document.querySelector('div#msg'); // id é representado por # se for class .
+        d.style.color = 'white';
+
+
+       
+
+    </script>
+    
+</body>
+</html>
